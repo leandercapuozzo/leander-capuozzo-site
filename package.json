@@ -1,0 +1,13 @@
+{
+  "name": "leander-capuozzo-personal-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Leander Capuozzo personal site mosaic",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "add-link": "node scripts/add-link.mjs",
+    "remove-link": "node scripts/remove-link.mjs",
+    "set-image": "node scripts/set-image.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
