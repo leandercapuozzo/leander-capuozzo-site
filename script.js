@@ -5,8 +5,6 @@ const aboutScrim = document.querySelector(".about-scrim");
 const aboutCloseButtons = document.querySelectorAll("[data-about-close]");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
 const hoverTitle = document.createElement("div");
-let selectedTile = null;
-let activeTileCount = 0;
 let hoverX = 0;
 let hoverY = 0;
 let titleX = 0;
@@ -85,27 +83,12 @@ function previewImage(tile) {
   return `${screenshotBase}${tile.url}`;
 }
 
-function isMobileGrid() {
-  return window.innerWidth <= 900;
-}
-
-function selectTile(link) {
-  if (selectedTile === link) return;
-  selectedTile?.classList.remove("is-selected");
-  selectedTile = link;
-  selectedTile.classList.add("is-selected");
-  mosaic.classList.add("has-selected");
-  setGrid(activeTileCount);
-  requestAnimationFrame(() => {
-    selectedTile.scrollIntoView({ block: "center", inline: "center", behavior: "auto" });
-  });
-}
-
 function renderTile(tile) {
-  const link = document.createElement("div");
+  const link = document.createElement("a");
   link.className = "tile";
-  link.tabIndex = 0;
-  link.setAttribute("role", "link");
+  link.href = tile.url;
+  link.target = "_blank";
+  link.rel = "noopener";
   link.ariaLabel = tile.alt || tile.title || sourceFromUrl(tile.url);
   if (tile.alt) {
     link.addEventListener("pointerenter", (event) => {
@@ -121,39 +104,6 @@ function renderTile(tile) {
   if (tile.zoom) link.style.setProperty("--zoom", tile.zoom);
   if (tile.fit) link.style.setProperty("--fit", tile.fit);
   if (tile.imageTransform) link.style.setProperty("--image-transform", tile.imageTransform);
-
-  const caption = document.createElement("span");
-  caption.className = "tile-caption";
-  caption.textContent = tile.alt || tile.title || sourceFromUrl(tile.url);
-  const visitLink = document.createElement("a");
-  visitLink.className = "tile-link";
-  visitLink.href = tile.url;
-  visitLink.target = "_blank";
-  visitLink.rel = "noopener";
-  visitLink.textContent = "Visit Link";
-  caption.append(visitLink);
-  link.append(caption);
-
-  link.addEventListener("click", (event) => {
-    if (event.target.closest(".tile-link")) return;
-    if (!isMobileGrid()) {
-      window.open(tile.url, "_blank", "noopener");
-      return;
-    }
-    if (selectedTile !== link) {
-      event.preventDefault();
-      selectTile(link);
-    }
-  });
-  link.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter") return;
-    if (isMobileGrid()) {
-      event.preventDefault();
-      selectTile(link);
-    } else {
-      window.open(tile.url, "_blank", "noopener");
-    }
-  });
 
   const probe = new Image();
   probe.referrerPolicy = "no-referrer";
@@ -174,15 +124,6 @@ function setGrid(count) {
   const availableHeight = Math.max(80, height - footerHeight);
 
   if (width <= 900) {
-    if (mosaic.classList.contains("has-selected")) {
-      const cols = 7;
-      const rows = Math.ceil((count + 20) / cols);
-      mosaic.style.setProperty("--cols", cols);
-      mosaic.style.setProperty("--rows", rows);
-      mosaic.style.setProperty("--tile-size", "15vw");
-      return;
-    }
-
     let cols = 1;
     for (; cols <= count; cols += 1) {
       const rows = Math.ceil(count / cols);
@@ -230,7 +171,6 @@ async function boot() {
     return bTime - aTime;
   });
 
-  activeTileCount = sorted.length;
   setGrid(sorted.length);
   mosaic.replaceChildren(...sorted.map(renderTile));
   window.addEventListener("resize", () => setGrid(sorted.length));
