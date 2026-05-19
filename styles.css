@@ -233,6 +233,12 @@ a {
   text-decoration: none;
 }
 
+.about-close:focus,
+.tile-close:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
 
 @media (max-width: 900px) {
   :root {
