@@ -124,8 +124,9 @@ function setGrid(count) {
   const availableHeight = Math.max(80, height - footerHeight);
 
   if (width <= 900) {
+    const maxMobileCols = Math.min(5, count);
     let cols = 1;
-    for (; cols <= count; cols += 1) {
+    for (; cols <= maxMobileCols; cols += 1) {
       const rows = Math.ceil(count / cols);
       const size = width / cols;
       if (rows * size <= availableHeight) break;
