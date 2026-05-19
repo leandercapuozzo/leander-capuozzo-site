@@ -306,6 +306,10 @@ a {
     background: rgba(0, 0, 0, 0.26);
   }
 
+  .tile-scrim {
+    background: transparent;
+  }
+
   .about-panel,
   .tile-panel {
     right: 0;
@@ -315,6 +319,10 @@ a {
     border-width: 1px 0 0;
     padding: 14px 14px calc(28px + env(safe-area-inset-bottom));
     transform: translateY(100%);
+  }
+
+  .tile-panel {
+    border-top: 0;
   }
 
   .about-panel.is-open,
