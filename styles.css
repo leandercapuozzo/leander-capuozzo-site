@@ -226,7 +226,10 @@ a {
 .about-close,
 .tile-close {
   display: block;
-  margin: 0 0 14px auto;
+  margin: -12px -12px 2px auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px;
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
