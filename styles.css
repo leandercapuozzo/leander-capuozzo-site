@@ -150,6 +150,10 @@ a {
   padding: 0;
 }
 
+.about-toggle {
+  text-decoration: none;
+}
+
 .about-toggle:focus-visible,
 .about-close:focus-visible {
   outline: 2px solid var(--accent);
