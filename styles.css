@@ -235,6 +235,11 @@ a {
     padding: 8px 10px 12px;
   }
 
+  .about-toggle {
+    justify-self: start;
+    text-align: left;
+  }
+
   .about-scrim {
     background: rgba(0, 0, 0, 0.26);
   }
