@@ -88,8 +88,7 @@
     "image": "./assets/ren-g-miss-247.png",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
-    "fit": "contain",
-    "imageTransform": "none",
+    "fit": "cover",
     "note": "Instagram post screenshot preview.",
     "alt": "Instagram carousel for Ren G's Miss 24/7."
   },
@@ -139,9 +138,9 @@
     "date": "2024-03-07",
     "addedAt": "2026-05-18T23:45:00.000Z",
     "image": "./assets/sauscha.png",
-    "fit": "contain",
-    "imageTransform": "none",
-    "alt": "Leander Capuozzo Instagram post featuring @sauscha photographed by Leander."
+    "fit": "cover",
+    "alt": "Leander Capuozzo Instagram post: @sauscha shot by Leander, reimagined by @holyweek.",
+    "note": "@sauscha shot by me, reimagined by @holyweek"
   },
   {
     "title": "Anna Bolina Is a Main Event",
@@ -208,8 +207,7 @@
     "image": "./assets/mingblingbling.png",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
-    "fit": "contain",
-    "imageTransform": "none",
+    "fit": "cover",
     "note": "Instagram post screenshot preview.",
     "alt": "Instagram carousel post featuring Manon."
   },
@@ -280,8 +278,7 @@
     "image": "./assets/sunrisehunter-carousel.png",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
-    "fit": "contain",
-    "imageTransform": "none",
+    "fit": "cover",
     "note": "b2b in bio\n#TrustYourAim\nPhoto @leandercapuozzo1\nArt @lacra0000",
     "alt": "Sunrise Hunter carousel: b2b in bio. #TrustYourAim. Photo @leandercapuozzo1. Art @lacra0000."
   },
@@ -376,8 +373,7 @@
     "image": "./assets/anna-bolina-sophia-lamar.png",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
-    "fit": "contain",
-    "imageTransform": "none",
+    "fit": "cover",
     "note": "Instagram post screenshot preview.",
     "alt": "ANNA BOLINA Instagram post featuring Sophia Lamar in Look 7."
   },
