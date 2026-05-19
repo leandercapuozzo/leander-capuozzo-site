@@ -1,4 +1,8 @@
 const mosaic = document.querySelector("#mosaic");
+const aboutToggle = document.querySelector(".about-toggle");
+const aboutPanel = document.querySelector("#about-panel");
+const aboutScrim = document.querySelector(".about-scrim");
+const aboutCloseButtons = document.querySelectorAll("[data-about-close]");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
 const hoverTitle = document.createElement("div");
 let hoverX = 0;
@@ -10,6 +14,26 @@ let titleFrame = null;
 hoverTitle.className = "hover-title";
 hoverTitle.setAttribute("aria-hidden", "true");
 document.body.append(hoverTitle);
+
+function setAboutOpen(isOpen) {
+  aboutToggle?.setAttribute("aria-expanded", String(isOpen));
+  aboutPanel?.setAttribute("aria-hidden", String(!isOpen));
+  aboutPanel?.classList.toggle("is-open", isOpen);
+  if (aboutScrim) aboutScrim.hidden = !isOpen;
+  if (isOpen) aboutPanel?.querySelector(".about-close")?.focus();
+}
+
+aboutToggle?.addEventListener("click", () => {
+  setAboutOpen(aboutToggle.getAttribute("aria-expanded") !== "true");
+});
+
+aboutCloseButtons.forEach((button) => {
+  button.addEventListener("click", () => setAboutOpen(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setAboutOpen(false);
+});
 
 function moveHoverTitle() {
   titleX += (hoverX - titleX) * 0.72;
