@@ -28,31 +28,10 @@ body {
   letter-spacing: 0;
 }
 
-body.is-initializing .site-shell {
-  visibility: hidden;
-}
-
 a {
   color: inherit;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.12em;
-}
-
-.initialize-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-  display: grid;
-  place-items: center;
-  background: #000;
-  color: #fff;
-  font-size: clamp(18px, 2vw, 28px);
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.initialize-screen[hidden] {
-  display: none;
 }
 
 .site-shell {
@@ -64,6 +43,7 @@ a {
 }
 
 .mosaic {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(var(--cols, 8), var(--tile-size));
   grid-template-rows: repeat(var(--rows, 5), var(--tile-size));
@@ -72,6 +52,20 @@ a {
   min-height: 0;
   overflow: hidden;
   background: #000;
+}
+
+.mosaic.is-initializing::after {
+  content: "Initializing";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: #000;
+  color: #fff;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .tile {

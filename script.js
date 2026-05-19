@@ -1,5 +1,4 @@
 const mosaic = document.querySelector("#mosaic");
-const initializeScreen = document.querySelector("#initialize-screen");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
 const initializeDelay = 650;
 
@@ -43,8 +42,7 @@ function renderTile(tile) {
 }
 
 function finishInitialize() {
-  document.body.classList.remove("is-initializing");
-  initializeScreen.hidden = true;
+  mosaic.classList.remove("is-initializing");
 }
 
 function setGrid(count) {
