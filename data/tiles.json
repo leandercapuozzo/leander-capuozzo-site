@@ -97,9 +97,10 @@
     "source": "YouTube",
     "date": "2024-10-11",
     "addedAt": "2026-05-18T23:20:01.000Z",
-    "image": "https://img.youtube.com/vi/z4UWcIuvsG8/hqdefault.jpg",
+    "image": "./assets/secret-somewhere-special.jpg",
     "zoom": "1.38",
-    "alt": "Official music video for Secret's song Somewhere Special."
+    "alt": "Official music video for Secret's song Somewhere Special.",
+    "fit": "cover"
   },
   {
     "title": "Photographer Leander Capuozzo Doesn't Buy Into the Nostalgia of Relying on Old Technology To Make New Work",
