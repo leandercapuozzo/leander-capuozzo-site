@@ -209,18 +209,16 @@ a {
   margin-top: 12px;
 }
 
-.about-links,
-.tile-link {
+.about-links {
   display: grid;
   gap: 5px;
   margin-top: 28px;
 }
 
 .tile-link {
-  place-items: center;
-  min-height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin-top: 28px;
 }
 
 .about-close,
