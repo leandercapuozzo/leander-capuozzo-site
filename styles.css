@@ -48,6 +48,7 @@ a {
   display: grid;
   grid-template-columns: repeat(var(--cols, 8), var(--tile-size));
   grid-template-rows: repeat(var(--rows, 5), var(--tile-size));
+  grid-auto-rows: var(--tile-size);
   place-content: center;
   gap: 0;
   min-height: 0;
@@ -66,6 +67,11 @@ a {
   border: 0;
   background: #000;
   color: var(--paper);
+  cursor: pointer;
+}
+
+.tile-caption {
+  display: none;
 }
 
 .tile::before {
@@ -230,6 +236,59 @@ a {
   .mosaic {
     --mobile-cols: 4;
     place-content: start center;
+  }
+
+  .mosaic.has-selected {
+    overflow: auto;
+    overscroll-behavior: contain;
+    place-content: start;
+    scroll-snap-type: both mandatory;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+  }
+
+  .mosaic.has-selected .tile {
+    scroll-snap-align: center;
+  }
+
+  .mosaic.has-selected .tile.is-selected {
+    display: grid;
+    grid-column: span 5;
+    grid-row: span 6;
+    grid-template-rows: 75vw minmax(0, 1fr);
+    min-width: 75vw;
+    min-height: calc(75vw + 72px);
+    z-index: 2;
+    background: #000;
+  }
+
+  .mosaic.has-selected .tile.is-selected::before {
+    position: static;
+    display: block;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transform: var(--image-transform, scale(var(--zoom, 1)));
+  }
+
+  .mosaic.has-selected .tile.is-selected .tile-caption {
+    display: block;
+    grid-row: 2;
+    align-self: start;
+    padding: 8px 9px 10px;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    line-height: 1.18;
+    overflow-wrap: break-word;
+  }
+
+  .tile-link {
+    display: block;
+    width: max-content;
+    margin-top: 10px;
+    color: #fff;
   }
 
   .contact {
