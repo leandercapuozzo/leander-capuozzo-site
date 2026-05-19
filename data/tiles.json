@@ -6,7 +6,8 @@
     "date": "2026-05-18",
     "addedAt": "2026-05-18T23:00:02.000Z",
     "note": "Trade page.",
-    "image": "https://www.onibi.us/_next/image?url=%2Fassets%2Ftrade%2Fmedia%2Fwolf-house-4.jpg&w=1920&q=75"
+    "image": "https://www.onibi.us/_next/image?url=%2Fassets%2Ftrade%2Fmedia%2Fwolf-house-4.jpg&w=1920&q=75",
+    "alt": "Onibi trade page with fashion imagery from the Wolf House editorial."
   },
   {
     "title": "Suzy Clue - FEED (Official Visualizer)",
@@ -15,7 +16,8 @@
     "date": "2026-05-15",
     "addedAt": "2026-05-18T23:30:02.000Z",
     "image": "https://img.youtube.com/vi/4PxcFkUeCwA/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official visualizer for Suzy Clue's song FEED."
   },
   {
     "title": "@saushadlo - Evidencia",
@@ -26,7 +28,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram post by @saushadlo for Evidencia."
   },
   {
     "title": "glaive - Asheville (Official Video)",
@@ -35,7 +38,8 @@
     "date": "2025-07-17",
     "addedAt": "2026-05-18T23:20:05.000Z",
     "image": "https://img.youtube.com/vi/0SLjHhcXapI/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official music video for glaive's song Asheville."
   },
   {
     "title": "Suzy Clue - Uneasy (Official Music Video)",
@@ -44,7 +48,8 @@
     "date": "2025-06-13",
     "addedAt": "2026-05-18T23:30:01.000Z",
     "image": "https://img.youtube.com/vi/cRgVLNZtPUw/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official music video for Suzy Clue's song Uneasy."
   },
   {
     "title": "Instagram post DJdj5i0zRhW",
@@ -55,7 +60,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram carousel post from May 2025."
   },
   {
     "title": "Anna Bolina's Runway Is a Release",
@@ -63,7 +69,8 @@
     "source": "PAPER",
     "date": "2025-02-13",
     "addedAt": "2026-05-18T23:10:04.000Z",
-    "image": "https://www.papermag.com/media-library/image.jpg?id=56496122&width=1200&height=1200&quality=70&coordinates=483%2C0%2C1089%2C0"
+    "image": "https://www.papermag.com/media-library/image.jpg?id=56496122&width=1200&height=1200&quality=70&coordinates=483%2C0%2C1089%2C0",
+    "alt": "PAPER feature on ANNA BOLINA's Fall 2025 runway show."
   },
   {
     "title": "Anna Bolina Solidifies Her Place as Womenswear Disruptor for the NYFW FW25 Season",
@@ -71,7 +78,8 @@
     "source": "V Magazine",
     "date": "2025-02-12",
     "addedAt": "2026-05-18T23:10:05.000Z",
-    "image": "https://vmagazine.com/wp-content/uploads/2025/02/annabolinarunwayfeb5.jpg"
+    "image": "https://vmagazine.com/wp-content/uploads/2025/02/annabolinarunwayfeb5.jpg",
+    "alt": "V Magazine feature on ANNA BOLINA's Fall/Winter 2025 NYFW runway collection."
   },
   {
     "title": "Ren G - Miss 24/7",
@@ -82,7 +90,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram carousel for Ren G's Miss 24/7."
   },
   {
     "title": "Secret - Somewhere Special (Official Music Video)",
@@ -91,7 +100,8 @@
     "date": "2024-10-11",
     "addedAt": "2026-05-18T23:20:01.000Z",
     "image": "https://img.youtube.com/vi/z4UWcIuvsG8/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official music video for Secret's song Somewhere Special."
   },
   {
     "title": "Photographer Leander Capuozzo Doesn't Buy Into the Nostalgia of Relying on Old Technology To Make New Work",
@@ -100,7 +110,8 @@
     "date": "2024-09-30",
     "addedAt": "2026-05-18T19:15:00.000Z",
     "note": "Young Photographers 2024 profile.",
-    "image": "https://culturedmag.nyc3.digitaloceanspaces.com/uploads/2025/05/09115112/dsc09288-1-1727191612903.jpg"
+    "image": "https://culturedmag.nyc3.digitaloceanspaces.com/uploads/2025/05/09115112/dsc09288-1-1727191612903.jpg",
+    "alt": "Cultured profile of Leander Capuozzo for its Young Photographers 2024 series."
   },
   {
     "title": "Anna Bolina is the designer challenging us to be better than basic",
@@ -108,7 +119,8 @@
     "source": "i-D",
     "date": "2024-05-01",
     "addedAt": "2026-05-18T23:10:03.000Z",
-    "image": "https://media.i-d.co/wp-content/uploads/2024/05/1675889417981-1annabolina.jpeg"
+    "image": "https://media.i-d.co/wp-content/uploads/2024/05/1675889417981-1annabolina.jpeg",
+    "alt": "i-D interview with ANNA BOLINA about the label's anti-basic fashion world."
   },
   {
     "title": "\"THE CAGE\"",
@@ -117,7 +129,8 @@
     "date": "2024-04-16",
     "addedAt": "2026-05-18T23:20:00.000Z",
     "image": "https://img.youtube.com/vi/s3fhDB6-EOc/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "YouTube video titled THE CAGE."
   },
   {
     "title": "Leander Capuozzo - @sauscha shot by me",
@@ -127,7 +140,8 @@
     "addedAt": "2026-05-18T23:45:00.000Z",
     "image": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/624065083_18091405391317838_7570162732261789603_n.jpg?stp=c204.0.615.614a_dst-jpg_e35_s640x640_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=8Kpg0QFwcbkQ7kNvwEpPaCU&_nc_oc=Adrf3z7ec_0Gk6ZcvDFJPQkD03VDWV-M_mwmdpCXYBr-9h-RDRn_BiYVs_usu23O44Irw0quHKUJLEYN3p7wrsMZ&_nc_zt=23&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=ebECh8k517uXc4A916CjXA&_nc_ss=7260f&oh=00_Af4eRtbvZR6osxHMl3gNNZyir5YdbEtieKsCk9abpvRIYQ&oe=6A11738A",
     "fit": "contain",
-    "imageTransform": "none"
+    "imageTransform": "none",
+    "alt": "Leander Capuozzo Instagram post featuring @sauscha photographed by Leander."
   },
   {
     "title": "Anna Bolina Is a Main Event",
@@ -135,7 +149,8 @@
     "source": "PAPER",
     "date": "2024-02-15",
     "addedAt": "2026-05-18T23:10:01.000Z",
-    "image": "https://www.papermag.com/media-library/image.jpg?id=51478074&width=1200&height=1200&quality=70&coordinates=290%2C0%2C410%2C0"
+    "image": "https://www.papermag.com/media-library/image.jpg?id=51478074&width=1200&height=1200&quality=70&coordinates=290%2C0%2C410%2C0",
+    "alt": "PAPER coverage of ANNA BOLINA's Fall 2024 runway show."
   },
   {
     "title": "Anna Bolina SS24 Revisits its Roots with Puffer Dresses",
@@ -143,7 +158,8 @@
     "source": "Hypebeast",
     "date": "2023-09-12",
     "addedAt": "2026-05-18T23:10:02.000Z",
-    "image": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F09%2Fnyfw-annabolina-ss24-twitter.jpg?w=1080&cbr=1&q=90&fit=max"
+    "image": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2023%2F09%2Fnyfw-annabolina-ss24-twitter.jpg?w=1080&cbr=1&q=90&fit=max",
+    "alt": "Hypebeast coverage of ANNA BOLINA's Spring/Summer 2024 NYFW runway collection."
   },
   {
     "title": "Scarlet Rae - Silver Train (music video)",
@@ -152,7 +168,8 @@
     "date": "2023-07-10",
     "addedAt": "2026-05-18T23:20:03.000Z",
     "image": "https://img.youtube.com/vi/7Z-NhThLnog/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Music video for Scarlet Rae's Silver Train."
   },
   {
     "title": "The Dare Shares The Sex EP Ahead of Debut Sold Out Headline Shows",
@@ -161,7 +178,8 @@
     "date": "2023-05-19",
     "addedAt": "2026-05-18T19:01:00.000Z",
     "note": "Photo by Leander Capuozzo.",
-    "image": "http://static1.squarespace.com/static/588e2c3ce3df287fa738320f/5ce81eb7971a18614dee4d62/646788260cf63c604b50813a/1685675844715/6466ce40dcc1b.jpeg?format=1500w"
+    "image": "http://static1.squarespace.com/static/588e2c3ce3df287fa738320f/5ce81eb7971a18614dee4d62/646788260cf63c604b50813a/1685675844715/6466ce40dcc1b.jpeg?format=1500w",
+    "alt": "PERJUS feature on The Dare's The Sex EP with photography by Leander Capuozzo."
   },
   {
     "title": "Club Eat - Surprise (Music Video)",
@@ -170,7 +188,8 @@
     "date": "2023-03-09",
     "addedAt": "2026-05-18T23:25:00.000Z",
     "image": "https://img.youtube.com/vi/bL1b0FK7WM0/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Music video for Club Eat's Surprise."
   },
   {
     "title": "Dion Lee Wants You to Feel Your Body",
@@ -179,7 +198,8 @@
     "date": "2023-02-13",
     "addedAt": "2026-05-18T19:14:00.000Z",
     "note": "Photographed by Leander Capuozzo.",
-    "image": "https://www.interviewmagazine.com/wp-content/uploads/2023/02/DSC08122-scaled.jpg"
+    "image": "https://www.interviewmagazine.com/wp-content/uploads/2023/02/DSC08122-scaled.jpg",
+    "alt": "Interview Magazine fashion story on Dion Lee photographed by Leander Capuozzo."
   },
   {
     "title": "Manon Instagram post",
@@ -190,7 +210,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram carousel post featuring Manon."
   },
   {
     "title": "Candy Cane presents new images of women",
@@ -199,7 +220,8 @@
     "date": "2022-12-10",
     "addedAt": "2026-05-18T19:04:00.000Z",
     "note": "Exhibition page.",
-    "image": "https://images.squarespace-cdn.com/content/v1/56f9b51420c647316dd20624/b0504383-48f1-42cb-8245-ec32b0deaac6/DSC_7727.jpg?format=1500w"
+    "image": "https://images.squarespace-cdn.com/content/v1/56f9b51420c647316dd20624/b0504383-48f1-42cb-8245-ec32b0deaac6/DSC_7727.jpg?format=1500w",
+    "alt": "Shoot the Lobster exhibition page for Candy Cane's New Images of Women."
   },
   {
     "title": "Surf Gang",
@@ -208,7 +230,8 @@
     "date": "2022-10-31",
     "addedAt": "2026-05-18T19:08:00.000Z",
     "note": "Photography by Leander Capuozzo.",
-    "image": "https://brickthemag.com/cdn/shop/articles/561079353493_1.webp?v=1713996902&width=1100"
+    "image": "https://brickthemag.com/cdn/shop/articles/561079353493_1.webp?v=1713996902&width=1100",
+    "alt": "BRICK Magazine feature on Surf Gang with photography by Leander Capuozzo."
   },
   {
     "title": "The Label Giving Prep a Saucy Makeover",
@@ -217,7 +240,8 @@
     "date": "2022-10-26",
     "addedAt": "2026-05-18T19:09:00.000Z",
     "note": "Raimundo Langlois visuals.",
-    "image": "https://assets.vogue.com/photos/63585ea79ac65ce7bb7bc65e/16:9/w_1280,c_limit/Leander%20Capuozzo%2014.jpg"
+    "image": "https://assets.vogue.com/photos/63585ea79ac65ce7bb7bc65e/16:9/w_1280,c_limit/Leander%20Capuozzo%2014.jpg",
+    "alt": "Vogue feature on Raimundo Langlois and its sexy prep styling, with visuals by Leander Capuozzo."
   },
   {
     "title": "Sexy, Messy, Elegant: Anna Bolina SS23",
@@ -226,7 +250,8 @@
     "date": "2022-09-15",
     "addedAt": "2026-05-18T19:12:00.000Z",
     "note": "NYFW coverage photographed by Leander.",
-    "image": "https://www.interviewmagazine.com/wp-content/uploads/2022/09/DSC0939.jpg"
+    "image": "https://www.interviewmagazine.com/wp-content/uploads/2022/09/DSC0939.jpg",
+    "alt": "Interview Magazine coverage of ANNA BOLINA Spring/Summer 2023 photographed by Leander Capuozzo."
   },
   {
     "title": "Instagram post Cb0SOkuOyHx",
@@ -237,7 +262,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram post from March 2022."
   },
   {
     "title": "Anna Bolina Leaves Nothing to the Imagination But Delivers Fantasy",
@@ -246,7 +272,8 @@
     "date": "2022-02-12",
     "addedAt": "2026-05-18T19:11:00.000Z",
     "note": "Images courtesy of Leander Capuozzo.",
-    "image": "https://assets.vogue.com/photos/62084e9322ecda4bae5a29d8/16:9/w_1280,c_limit/anna-bolina-soc.jpeg"
+    "image": "https://assets.vogue.com/photos/62084e9322ecda4bae5a29d8/16:9/w_1280,c_limit/anna-bolina-soc.jpeg",
+    "alt": "Vogue coverage of ANNA BOLINA Fall 2022 with images courtesy of Leander Capuozzo."
   },
   {
     "title": "waveform* - Favorite Song (Official Music Video)",
@@ -255,7 +282,8 @@
     "date": "2021-11-01",
     "addedAt": "2026-05-18T23:20:02.000Z",
     "image": "https://img.youtube.com/vi/aKx9hXQfePE/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official music video for waveform*'s Favorite Song."
   },
   {
     "title": "@_sunrisehunter Instagram post",
@@ -266,7 +294,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram carousel post by @_sunrisehunter."
   },
   {
     "title": "The September Issue, According to The Drunken Canal",
@@ -275,7 +304,8 @@
     "date": "2021-09-09",
     "addedAt": "2026-05-18T19:10:00.000Z",
     "note": "Photographed by Leander Capuozzo.",
-    "image": "https://assets.vogue.com/photos/6138f8cd598e49fed3cc1a27/master/w_1280,c_limit/_DSF6234.jpg"
+    "image": "https://assets.vogue.com/photos/6138f8cd598e49fed3cc1a27/master/w_1280,c_limit/_DSF6234.jpg",
+    "alt": "Vogue feature on The Drunken Canal's September issue photographed by Leander Capuozzo."
   },
   {
     "title": "Miss Madeline - Bad Girls",
@@ -285,7 +315,8 @@
     "addedAt": "2026-05-18T19:16:00.000Z",
     "note": "Directed by Leander Capuozzo.",
     "image": "https://img.youtube.com/vi/qu9WWfN2H6c/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Music video for Miss Madeline's Bad Girls, directed by Leander Capuozzo."
   },
   {
     "title": "@_sunrisehunter Instagram post",
@@ -296,7 +327,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "Instagram carousel post by @_sunrisehunter."
   },
   {
     "title": "Pretty Sick - Devil In Me",
@@ -306,7 +338,8 @@
     "addedAt": "2026-05-18T19:17:00.000Z",
     "note": "Directed by Leander Capuozzo.",
     "image": "https://img.youtube.com/vi/SbuVHaE3SVc/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Music video for Pretty Sick's Devil In Me, directed by Leander Capuozzo."
   },
   {
     "title": "Isabella Lovestory - Kitten Heel [Club Eat remix]",
@@ -315,7 +348,8 @@
     "date": "2021-04-20",
     "addedAt": "2026-05-18T23:20:04.000Z",
     "image": "https://img.youtube.com/vi/HyNiu2YN4rU/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "YouTube video for Isabella Lovestory's Kitten Heel, Club Eat remix."
   },
   {
     "title": "Club Eat - Lucky (Official Music Video)",
@@ -324,7 +358,8 @@
     "date": "2021-03-10",
     "addedAt": "2026-05-18T23:25:01.000Z",
     "image": "https://img.youtube.com/vi/H332dYkBQCI/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official music video for Club Eat's Lucky."
   },
   {
     "title": "Club Eat - Club Queen (Official Music Video)",
@@ -333,7 +368,8 @@
     "date": "2021-01-28",
     "addedAt": "2026-05-18T23:25:02.000Z",
     "image": "https://img.youtube.com/vi/PztOmXHXT0o/hqdefault.jpg",
-    "zoom": "1.38"
+    "zoom": "1.38",
+    "alt": "Official music video for Club Eat's Club Queen."
   },
   {
     "title": "Sueco - PRIMADONA",
@@ -342,7 +378,8 @@
     "date": "2020-12-04",
     "addedAt": "2026-05-18T19:18:00.000Z",
     "note": "Artwork by Leander Capuozzo.",
-    "image": "https://images.genius.com/18a7e62d14784227f5ce408fc629f8a7.1000x1000x1.png"
+    "image": "https://images.genius.com/18a7e62d14784227f5ce408fc629f8a7.1000x1000x1.png",
+    "alt": "YouTube video for Sueco's PRIMADONA with artwork by Leander Capuozzo."
   },
   {
     "title": "ANNA BOLINA OFFICIAL - Sophia Lamar in Look 7",
@@ -353,7 +390,8 @@
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
     "imageTransform": "none",
-    "note": "Instagram post screenshot preview."
+    "note": "Instagram post screenshot preview.",
+    "alt": "ANNA BOLINA Instagram post featuring Sophia Lamar in Look 7."
   },
   {
     "title": "Inside Patia's Fantasy World",
@@ -362,7 +400,8 @@
     "date": "2020-05-01",
     "addedAt": "2026-05-18T19:06:00.000Z",
     "note": "Photos by Leander Capuozzo.",
-    "image": "https://officemag.b-cdn.net/sites/default/files/styles/article_image_large/public/r0016288.jpg?itok=oWH8MI3A"
+    "image": "https://officemag.b-cdn.net/sites/default/files/styles/article_image_large/public/r0016288.jpg?itok=oWH8MI3A",
+    "alt": "Office Magazine feature Inside Patia's Fantasy World with photos by Leander Capuozzo."
   },
   {
     "title": "Pontiac Streator & Ulla Straus - Item 5",
@@ -371,6 +410,7 @@
     "date": "2019-07-17",
     "addedAt": "2026-05-18T23:00:01.000Z",
     "note": "Music video on Four Three.",
-    "image": "https://videos.boilerroom.tv/assets/Screen_Shot_2019-07-17_at_10.20.14_Rq1o3j5.jpg"
+    "image": "https://videos.boilerroom.tv/assets/Screen_Shot_2019-07-17_at_10.20.14_Rq1o3j5.jpg",
+    "alt": "Boiler Room 4:3 music video Item 5 by Pontiac Streator and Ulla Straus."
   }
 ]

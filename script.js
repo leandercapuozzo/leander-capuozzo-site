@@ -20,7 +20,8 @@ function renderTile(tile) {
   link.href = tile.url;
   link.target = "_blank";
   link.rel = "noopener";
-  link.ariaLabel = tile.title || sourceFromUrl(tile.url);
+  link.ariaLabel = tile.alt || tile.title || sourceFromUrl(tile.url);
+  if (tile.alt) link.title = tile.alt;
   link.style.setProperty("--image", `url("${previewImage(tile)}")`);
   if (tile.zoom) link.style.setProperty("--zoom", tile.zoom);
   if (tile.fit) link.style.setProperty("--fit", tile.fit);

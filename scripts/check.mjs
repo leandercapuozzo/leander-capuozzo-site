@@ -11,6 +11,7 @@ for (const [index, tile] of tiles.entries()) {
   const label = `${index + 1}: ${tile.title || tile.url || "untitled"}`;
   if (!tile.url) errors.push(`${label} is missing url`);
   if (!tile.title) errors.push(`${label} is missing title`);
+  if (!tile.alt) errors.push(`${label} is missing alt text`);
   if (!tile.image) errors.push(`${label} is missing image`);
   if (!tile.date || Number.isNaN(Date.parse(tile.date))) errors.push(`${label} has invalid date`);
   if (tile.url && seen.has(tile.url)) errors.push(`${label} duplicates ${tile.url}`);
