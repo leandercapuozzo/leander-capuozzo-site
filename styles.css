@@ -203,13 +203,15 @@ a {
 .about-links {
   display: grid;
   gap: 5px;
-  margin-top: 16px;
+  margin-top: 28px;
 }
 
 .about-close {
   display: block;
   margin: 0 0 14px auto;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
