@@ -100,7 +100,12 @@ function setGrid(count) {
   const availableHeight = Math.max(80, height - footerHeight);
 
   if (width <= 900) {
-    const cols = width <= 520 ? 2 : 4;
+    let cols = 1;
+    for (; cols <= count; cols += 1) {
+      const rows = Math.ceil(count / cols);
+      const size = width / cols;
+      if (rows * size <= availableHeight) break;
+    }
     const rows = Math.ceil(count / cols);
     mosaic.style.setProperty("--cols", cols);
     mosaic.style.setProperty("--rows", rows);
