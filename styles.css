@@ -90,17 +90,21 @@ a {
   top: 0;
   left: 0;
   z-index: 20;
-  max-width: min(340px, calc(100vw - 24px));
+  max-width: min(360px, calc(100vw - 20px));
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.82);
+  background: #000;
   color: #fff;
-  padding: 7px 9px 8px;
-  font-size: 14px;
-  line-height: 1.18;
+  padding: 8px 10px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.36);
+  font-size: 13px;
+  line-height: 1.16;
+  letter-spacing: 0;
   opacity: 0;
   overflow-wrap: break-word;
-  transition: opacity 140ms ease;
-  will-change: transform;
+  transition: opacity 90ms ease;
+  will-change: transform, opacity;
+  backdrop-filter: blur(4px);
 }
 
 .hover-title.is-visible {

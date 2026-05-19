@@ -12,8 +12,8 @@ hoverTitle.setAttribute("aria-hidden", "true");
 document.body.append(hoverTitle);
 
 function moveHoverTitle() {
-  titleX += (hoverX - titleX) * 0.32;
-  titleY += (hoverY - titleY) * 0.32;
+  titleX += (hoverX - titleX) * 0.72;
+  titleY += (hoverY - titleY) * 0.72;
   hoverTitle.style.transform = "translate3d(" + titleX + "px, " + titleY + "px, 0)";
 
   if (hoverTitle.classList.contains("is-visible")) {
@@ -24,11 +24,13 @@ function moveHoverTitle() {
 }
 
 function updateHoverTarget(event) {
-  const offset = 16;
-  const maxX = window.innerWidth - hoverTitle.offsetWidth - 12;
-  const maxY = window.innerHeight - hoverTitle.offsetHeight - 12;
-  hoverX = Math.max(12, Math.min(event.clientX + offset, maxX));
-  hoverY = Math.max(12, Math.min(event.clientY + offset, maxY));
+  const offsetX = 18;
+  const offsetY = 18;
+  const margin = 10;
+  const maxX = window.innerWidth - hoverTitle.offsetWidth - margin;
+  const maxY = window.innerHeight - hoverTitle.offsetHeight - margin;
+  hoverX = Math.max(margin, Math.min(event.clientX + offsetX, maxX));
+  hoverY = Math.max(margin, Math.min(event.clientY + offsetY, maxY));
 }
 
 function showHoverTitle(text, event) {
