@@ -125,11 +125,14 @@ function setGrid(count) {
 
   if (width <= 900) {
     const maxMobileCols = Math.min(5, count);
-    let cols = 1;
-    for (; cols <= maxMobileCols; cols += 1) {
-      const rows = Math.ceil(count / cols);
-      const size = width / cols;
-      if (rows * size <= availableHeight) break;
+    let cols = maxMobileCols;
+    for (let candidate = 1; candidate <= maxMobileCols; candidate += 1) {
+      const rows = Math.ceil(count / candidate);
+      const size = width / candidate;
+      if (rows * size <= availableHeight) {
+        cols = candidate;
+        break;
+      }
     }
     const rows = Math.ceil(count / cols);
     mosaic.style.setProperty("--cols", cols);
