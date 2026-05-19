@@ -3,8 +3,14 @@ const aboutToggle = document.querySelector(".about-toggle");
 const aboutPanel = document.querySelector("#about-panel");
 const aboutScrim = document.querySelector(".about-scrim");
 const aboutCloseButtons = document.querySelectorAll("[data-about-close]");
+const tilePanel = document.querySelector("#tile-panel");
+const tileSummary = document.querySelector(".tile-summary");
+const tileLink = document.querySelector(".tile-link");
+const tileScrim = document.querySelector(".tile-scrim");
+const tileCloseButtons = document.querySelectorAll("[data-tile-close]");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
 const hoverTitle = document.createElement("div");
+const touchQuery = window.matchMedia("(hover: none), (pointer: coarse)");
 let hoverX = 0;
 let hoverY = 0;
 let titleX = 0;
@@ -23,6 +29,22 @@ function setAboutOpen(isOpen) {
   if (isOpen) aboutPanel?.querySelector(".about-close")?.focus();
 }
 
+function setTileOpen(isOpen, tile) {
+  tilePanel?.setAttribute("aria-hidden", String(!isOpen));
+  tilePanel?.classList.toggle("is-open", isOpen);
+  if (tileScrim) tileScrim.hidden = !isOpen;
+
+  if (isOpen && tile) {
+    const summary = tile.alt || tile.title || sourceFromUrl(tile.url);
+    if (tileSummary) tileSummary.textContent = summary;
+    if (tileLink) {
+      tileLink.href = tile.url;
+      tileLink.textContent = "Open " + sourceFromUrl(tile.url);
+    }
+    tilePanel?.querySelector(".tile-close")?.focus();
+  }
+}
+
 aboutToggle?.addEventListener("click", () => {
   setAboutOpen(aboutToggle.getAttribute("aria-expanded") !== "true");
 });
@@ -31,8 +53,15 @@ aboutCloseButtons.forEach((button) => {
   button.addEventListener("click", () => setAboutOpen(false));
 });
 
+tileCloseButtons.forEach((button) => {
+  button.addEventListener("click", () => setTileOpen(false));
+});
+
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setAboutOpen(false);
+  if (event.key === "Escape") {
+    setAboutOpen(false);
+    setTileOpen(false);
+  }
 });
 
 function moveHoverTitle() {
@@ -90,6 +119,13 @@ function renderTile(tile) {
   link.target = "_blank";
   link.rel = "noopener";
   link.ariaLabel = tile.alt || tile.title || sourceFromUrl(tile.url);
+  link.addEventListener("click", (event) => {
+    if (!touchQuery.matches) return;
+    event.preventDefault();
+    hideHoverTitle();
+    setAboutOpen(false);
+    setTileOpen(true, tile);
+  });
   if (tile.alt) {
     link.addEventListener("pointerenter", (event) => {
       if (event.pointerType !== "touch") showHoverTitle(tile.alt, event);

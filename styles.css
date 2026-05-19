@@ -134,7 +134,8 @@ a {
 }
 
 .about-toggle,
-.about-close {
+.about-close,
+.tile-close {
   appearance: none;
   border: 0;
   border-radius: 0;
@@ -155,19 +156,23 @@ a {
 }
 
 .about-toggle:focus-visible,
-.about-close:focus-visible {
+.about-close:focus-visible,
+.tile-close:focus-visible,
+.tile-link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
-.about-scrim {
+.about-scrim,
+.tile-scrim {
   position: fixed;
   inset: 0;
   z-index: 24;
   background: transparent;
 }
 
-.about-panel {
+.about-panel,
+.tile-panel {
   position: fixed;
   right: 16px;
   bottom: calc(var(--footer-h) + 16px);
@@ -190,13 +195,15 @@ a {
   transition: opacity 120ms ease, transform 120ms ease;
 }
 
-.about-panel.is-open {
+.about-panel.is-open,
+.tile-panel.is-open {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-.about-panel p {
+.about-panel p,
+.tile-panel p {
   margin: 0;
 }
 
@@ -204,19 +211,29 @@ a {
   margin-top: 12px;
 }
 
-.about-links {
+.about-links,
+.tile-link {
   display: grid;
   gap: 5px;
   margin-top: 28px;
 }
 
-.about-close {
+.tile-link {
+  place-items: center;
+  min-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+}
+
+.about-close,
+.tile-close {
   display: block;
   margin: 0 0 14px auto;
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
 }
+
 
 @media (max-width: 900px) {
   :root {
@@ -246,11 +263,13 @@ a {
     text-align: left;
   }
 
-  .about-scrim {
+  .about-scrim,
+  .tile-scrim {
     background: rgba(0, 0, 0, 0.26);
   }
 
-  .about-panel {
+  .about-panel,
+  .tile-panel {
     right: 0;
     bottom: 0;
     width: 100vw;
@@ -260,7 +279,8 @@ a {
     transform: translateY(100%);
   }
 
-  .about-panel.is-open {
+  .about-panel.is-open,
+  .tile-panel.is-open {
     transform: translateY(0);
   }
 }
