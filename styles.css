@@ -200,6 +200,12 @@ a {
   margin-top: 12px;
 }
 
+.about-links {
+  display: grid;
+  gap: 5px;
+  margin-top: 16px;
+}
+
 .about-close {
   display: block;
   margin: 0 0 14px auto;
