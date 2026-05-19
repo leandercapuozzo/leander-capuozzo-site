@@ -1,5 +1,7 @@
 const mosaic = document.querySelector("#mosaic");
+const initializeScreen = document.querySelector("#initialize-screen");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
+const initializeDelay = 650;
 
 function sourceFromUrl(url) {
   try {
@@ -14,7 +16,7 @@ function previewImage(tile) {
   return `${screenshotBase}${tile.url}`;
 }
 
-function renderTile(tile, index) {
+function renderTile(tile) {
   const link = document.createElement("a");
   link.className = "tile";
   link.href = tile.url;
@@ -25,7 +27,6 @@ function renderTile(tile, index) {
   if (tile.zoom) link.style.setProperty("--zoom", tile.zoom);
   if (tile.fit) link.style.setProperty("--fit", tile.fit);
   if (tile.imageTransform) link.style.setProperty("--image-transform", tile.imageTransform);
-  link.style.animationDelay = `${Math.min(index * 70, 1100)}ms`;
 
   const probe = new Image();
   probe.referrerPolicy = "no-referrer";
@@ -39,6 +40,11 @@ function renderTile(tile, index) {
   probe.src = previewImage(tile);
 
   return link;
+}
+
+function finishInitialize() {
+  document.body.classList.remove("is-initializing");
+  initializeScreen.hidden = true;
 }
 
 function setGrid(count) {
@@ -85,8 +91,11 @@ async function boot() {
   mosaic.replaceChildren(...sorted.map(renderTile));
   window.addEventListener("resize", () => setGrid(sorted.length));
   window.visualViewport?.addEventListener("resize", () => setGrid(sorted.length));
+
+  window.setTimeout(finishInitialize, initializeDelay);
 }
 
 boot().catch((error) => {
+  finishInitialize();
   mosaic.textContent = `Could not load links: ${error.message}`;
 });
