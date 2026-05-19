@@ -47,7 +47,7 @@ a {
   display: grid;
   grid-template-columns: repeat(var(--cols, 8), var(--tile-size));
   grid-template-rows: repeat(var(--rows, 5), var(--tile-size));
-  place-content: start center;
+  place-content: center;
   gap: 0;
   min-height: 0;
   overflow: hidden;
@@ -116,6 +116,7 @@ a {
 
   .mosaic {
     --mobile-cols: 4;
+    place-content: start center;
   }
 
   .contact {
