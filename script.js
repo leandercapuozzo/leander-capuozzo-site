@@ -11,6 +11,7 @@ const tileCloseButtons = document.querySelectorAll("[data-tile-close]");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
 const hoverTitle = document.createElement("div");
 const touchQuery = window.matchMedia("(hover: none), (pointer: coarse)");
+const inAppBrowserQuery = /(Instagram|FBAN|FBAV|Twitter|XTwitter|Line|MicroMessenger|TikTok|Snapchat)/i;
 let hoverX = 0;
 let hoverY = 0;
 let titleX = 0;
@@ -114,6 +115,10 @@ function previewImage(tile) {
   return `${screenshotBase}${tile.url}`;
 }
 
+function shouldHideIncompleteRows() {
+  return inAppBrowserQuery.test(window.navigator.userAgent);
+}
+
 function renderTile(tile) {
   const link = document.createElement("a");
   link.className = "tile";
@@ -174,11 +179,12 @@ function setGrid(count) {
     }
     const tileSize = width / cols;
     const fullRows = Math.max(1, Math.floor(availableHeight / tileSize));
-    const rows = Math.min(Math.ceil(count / cols), fullRows);
+    const naturalRows = Math.ceil(count / cols);
+    const rows = shouldHideIncompleteRows() ? Math.min(naturalRows, fullRows) : naturalRows;
     mosaic.style.setProperty("--cols", cols);
     mosaic.style.setProperty("--rows", rows);
     mosaic.style.setProperty("--tile-size", `${tileSize}px`);
-    return Math.min(count, cols * rows);
+    return shouldHideIncompleteRows() ? Math.min(count, cols * rows) : count;
   }
 
   let best = { cols: count, rows: 1, size: Math.min(width / count, availableHeight), score: Infinity };
