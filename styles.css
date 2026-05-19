@@ -170,10 +170,16 @@ a {
   text-decoration: none;
 }
 
-.about-toggle:focus-visible,
-.tile-link:focus-visible {
+.about-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+.tile-link:focus,
+.tile-link:focus-visible,
+.tile-link:active {
+  outline: 0;
+  box-shadow: none;
 }
 
 .about-scrim,

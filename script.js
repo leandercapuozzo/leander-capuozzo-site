@@ -44,7 +44,6 @@ function setTileOpen(isOpen, tile) {
       tileLink.href = tile.url;
       tileLink.textContent = sourceFromUrl(tile.url);
     }
-    tileLink?.focus();
   }
 }
 
