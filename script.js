@@ -39,7 +39,7 @@ function setTileOpen(isOpen, tile) {
     if (tileSummary) tileSummary.textContent = summary;
     if (tileLink) {
       tileLink.href = tile.url;
-      tileLink.textContent = "Open " + sourceFromUrl(tile.url);
+      tileLink.textContent = sourceFromUrl(tile.url);
     }
     tileLink?.focus();
   }
