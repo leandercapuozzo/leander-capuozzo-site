@@ -55,11 +55,10 @@
     "title": "Instagram post DJdj5i0zRhW",
     "url": "https://www.instagram.com/p/DJdj5i0zRhW/?img_index=1",
     "date": "2025-05-10",
-    "image": "https://scontent-lga3-2.cdninstagram.com/v/t51.75761-15/496558054_18367415557123607_8254589031999308572_n.jpg?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=lOzOcHkXif4Q7kNvwEkQ9P7&_nc_oc=AdpVkz4VJG0ZvP5twCesuKI_OvM2MyED7xQxv8Ts-BNwzXL2W_xprq8Hu1DAzOoxLeNE5fCnEQjvghNBkXT4w0Sg&_nc_zt=23&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=1YE7WYh338zVoND15OrCJw&_nc_ss=7260f&oh=00_Af4fMzNO3fCjUdrw1x3oe9c-89tXgqnzMITlarnBv-oV8w&oe=6A11653A",
+    "image": "./assets/instagram-djdj5i0zRhw.jpg",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
-    "fit": "contain",
-    "imageTransform": "none",
+    "fit": "cover",
     "note": "Instagram post screenshot preview.",
     "alt": "Instagram carousel post from May 2025."
   },
