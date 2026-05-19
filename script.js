@@ -93,11 +93,21 @@ function renderTile(tile) {
 }
 
 function setGrid(count) {
-  const width = document.documentElement.clientWidth;
-  const height = window.visualViewport?.height || window.innerHeight;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
   const footer = document.querySelector(".contact");
   const footerHeight = footer?.getBoundingClientRect().height || 54;
   const availableHeight = Math.max(80, height - footerHeight);
+
+  if (width <= 900) {
+    const cols = width <= 520 ? 2 : 4;
+    const rows = Math.ceil(count / cols);
+    mosaic.style.setProperty("--cols", cols);
+    mosaic.style.setProperty("--rows", rows);
+    mosaic.style.setProperty("--tile-size", `${width / cols}px`);
+    return;
+  }
+
   let best = { cols: count, rows: 1, size: Math.min(width / count, availableHeight), score: Infinity };
 
   for (let cols = 1; cols <= count; cols += 1) {
@@ -135,7 +145,6 @@ async function boot() {
   setGrid(sorted.length);
   mosaic.replaceChildren(...sorted.map(renderTile));
   window.addEventListener("resize", () => setGrid(sorted.length));
-  window.visualViewport?.addEventListener("resize", () => setGrid(sorted.length));
 }
 
 boot().catch((error) => {
