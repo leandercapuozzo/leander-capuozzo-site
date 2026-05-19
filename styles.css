@@ -85,6 +85,28 @@ a {
   outline-offset: -2px;
 }
 
+.hover-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  max-width: min(340px, calc(100vw - 24px));
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+  padding: 7px 9px 8px;
+  font-size: 14px;
+  line-height: 1.18;
+  opacity: 0;
+  overflow-wrap: break-word;
+  transition: opacity 140ms ease;
+  will-change: transform;
+}
+
+.hover-title.is-visible {
+  opacity: 1;
+}
+
 .contact {
   display: flex;
   align-items: center;
@@ -126,6 +148,12 @@ a {
     row-gap: 4px;
     white-space: normal;
     padding: 8px 10px 12px;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .hover-title {
+    display: none;
   }
 }
 

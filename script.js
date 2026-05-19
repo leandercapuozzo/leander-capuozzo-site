@@ -1,5 +1,48 @@
 const mosaic = document.querySelector("#mosaic");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
+const hoverTitle = document.createElement("div");
+let hoverX = 0;
+let hoverY = 0;
+let titleX = 0;
+let titleY = 0;
+let titleFrame = null;
+
+hoverTitle.className = "hover-title";
+hoverTitle.setAttribute("aria-hidden", "true");
+document.body.append(hoverTitle);
+
+function moveHoverTitle() {
+  titleX += (hoverX - titleX) * 0.32;
+  titleY += (hoverY - titleY) * 0.32;
+  hoverTitle.style.transform = "translate3d(" + titleX + "px, " + titleY + "px, 0)";
+
+  if (hoverTitle.classList.contains("is-visible")) {
+    titleFrame = requestAnimationFrame(moveHoverTitle);
+  } else {
+    titleFrame = null;
+  }
+}
+
+function updateHoverTarget(event) {
+  const offset = 16;
+  const maxX = window.innerWidth - hoverTitle.offsetWidth - 12;
+  const maxY = window.innerHeight - hoverTitle.offsetHeight - 12;
+  hoverX = Math.max(12, Math.min(event.clientX + offset, maxX));
+  hoverY = Math.max(12, Math.min(event.clientY + offset, maxY));
+}
+
+function showHoverTitle(text, event) {
+  hoverTitle.textContent = text;
+  hoverTitle.classList.add("is-visible");
+  updateHoverTarget(event);
+  titleX = hoverX;
+  titleY = hoverY;
+  if (!titleFrame) moveHoverTitle();
+}
+
+function hideHoverTitle() {
+  hoverTitle.classList.remove("is-visible");
+}
 
 function sourceFromUrl(url) {
   try {
@@ -21,7 +64,16 @@ function renderTile(tile) {
   link.target = "_blank";
   link.rel = "noopener";
   link.ariaLabel = tile.alt || tile.title || sourceFromUrl(tile.url);
-  if (tile.alt) link.title = tile.alt;
+  if (tile.alt) {
+    link.addEventListener("pointerenter", (event) => {
+      if (event.pointerType !== "touch") showHoverTitle(tile.alt, event);
+    });
+    link.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "touch") updateHoverTarget(event);
+    });
+    link.addEventListener("pointerleave", hideHoverTitle);
+    link.addEventListener("blur", hideHoverTitle);
+  }
   link.style.setProperty("--image", `url("${previewImage(tile)}")`);
   if (tile.zoom) link.style.setProperty("--zoom", tile.zoom);
   if (tile.fit) link.style.setProperty("--fit", tile.fit);
