@@ -1,6 +1,5 @@
 const mosaic = document.querySelector("#mosaic");
 const screenshotBase = "https://image.thum.io/get/width/900/crop/900/noanimate/";
-const initializeDelay = 650;
 
 function sourceFromUrl(url) {
   try {
@@ -29,9 +28,6 @@ function renderTile(tile) {
 
   const probe = new Image();
   probe.referrerPolicy = "no-referrer";
-  probe.onload = () => {
-    link.classList.add("is-loaded");
-  };
   probe.onerror = () => {
     link.style.removeProperty("--image");
     link.classList.add("is-missing");
@@ -39,10 +35,6 @@ function renderTile(tile) {
   probe.src = previewImage(tile);
 
   return link;
-}
-
-function finishInitialize() {
-  mosaic.classList.remove("is-initializing");
 }
 
 function setGrid(count) {
@@ -89,11 +81,8 @@ async function boot() {
   mosaic.replaceChildren(...sorted.map(renderTile));
   window.addEventListener("resize", () => setGrid(sorted.length));
   window.visualViewport?.addEventListener("resize", () => setGrid(sorted.length));
-
-  window.setTimeout(finishInitialize, initializeDelay);
 }
 
 boot().catch((error) => {
-  finishInitialize();
   mosaic.textContent = `Could not load links: ${error.message}`;
 });

@@ -54,20 +54,6 @@ a {
   background: #000;
 }
 
-.mosaic.is-initializing::after {
-  content: "Initializing";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  background: #000;
-  color: #fff;
-  font-size: clamp(18px, 2vw, 28px);
-  line-height: 1;
-  text-transform: uppercase;
-}
-
 .tile {
   position: relative;
   display: block;
