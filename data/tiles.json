@@ -26,8 +26,7 @@
     "image": "./assets/evidencia.png",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
-    "fit": "contain",
-    "imageTransform": "none",
+    "fit": "cover",
     "note": "Instagram post screenshot preview.",
     "alt": "Instagram post by @saushadlo for Evidencia."
   },
