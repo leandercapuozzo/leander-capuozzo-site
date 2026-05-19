@@ -16,6 +16,8 @@ let hoverY = 0;
 let titleX = 0;
 let titleY = 0;
 let titleFrame = null;
+let allTiles = [];
+let currentVisibleCount = 0;
 
 hoverTitle.className = "hover-title";
 hoverTitle.setAttribute("aria-hidden", "true");
@@ -170,11 +172,13 @@ function setGrid(count) {
         break;
       }
     }
-    const rows = Math.ceil(count / cols);
+    const tileSize = width / cols;
+    const fullRows = Math.max(1, Math.floor(availableHeight / tileSize));
+    const rows = Math.min(Math.ceil(count / cols), fullRows);
     mosaic.style.setProperty("--cols", cols);
     mosaic.style.setProperty("--rows", rows);
-    mosaic.style.setProperty("--tile-size", `${width / cols}px`);
-    return;
+    mosaic.style.setProperty("--tile-size", `${tileSize}px`);
+    return Math.min(count, cols * rows);
   }
 
   let best = { cols: count, rows: 1, size: Math.min(width / count, availableHeight), score: Infinity };
@@ -197,12 +201,20 @@ function setGrid(count) {
   mosaic.style.setProperty("--cols", best.cols);
   mosaic.style.setProperty("--rows", best.rows);
   mosaic.style.setProperty("--tile-size", `${best.size}px`);
+  return count;
+}
+
+function renderVisibleTiles() {
+  const visibleCount = setGrid(allTiles.length);
+  if (visibleCount === currentVisibleCount && mosaic.children.length === visibleCount) return;
+  currentVisibleCount = visibleCount;
+  mosaic.replaceChildren(...allTiles.slice(0, visibleCount).map(renderTile));
 }
 
 async function boot() {
   const response = await fetch("./data/tiles.json", { cache: "no-store" });
   const tiles = await response.json();
-  const sorted = [...tiles].sort((a, b) => {
+  allTiles = [...tiles].sort((a, b) => {
     const aTime = Date.parse(a.date || "1970-01-01");
     const bTime = Date.parse(b.date || "1970-01-01");
     if (bTime === aTime) {
@@ -211,9 +223,8 @@ async function boot() {
     return bTime - aTime;
   });
 
-  setGrid(sorted.length);
-  mosaic.replaceChildren(...sorted.map(renderTile));
-  window.addEventListener("resize", () => setGrid(sorted.length));
+  renderVisibleTiles();
+  window.addEventListener("resize", renderVisibleTiles);
 }
 
 boot().catch((error) => {
