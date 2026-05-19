@@ -41,7 +41,7 @@ function setTileOpen(isOpen, tile) {
       tileLink.href = tile.url;
       tileLink.textContent = "Open " + sourceFromUrl(tile.url);
     }
-    tilePanel?.querySelector(".tile-close")?.focus();
+    tileLink?.focus();
   }
 }
 
