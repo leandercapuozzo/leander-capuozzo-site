@@ -5,8 +5,8 @@
     "source": "Onibi",
     "date": "2026-05-18",
     "addedAt": "2026-05-18T23:00:02.000Z",
-    "note": "Trade page.",
-    "image": "https://www.onibi.us/_next/image?url=%2Fassets%2Ftrade%2Fmedia%2Fwolf-house-4.jpg&w=1920&q=75",
+    "note": "Ramulus at Wolf House Philip Johnson Residence, Hudson Valley, New York",
+    "image": "./assets/onibi-trade-wolf-house.png",
     "alt": "Onibi trade page with fashion imagery from the Wolf House editorial."
   },
   {
@@ -318,7 +318,7 @@
     "title": "@_sunrisehunter Instagram post",
     "url": "https://www.instagram.com/p/CRzsPCojCSv/?img_index=1",
     "date": "2021-07-26",
-    "image": "https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/649224267_18083798102256686_5412029676837454562_n.jpg?stp=c288.0.864.864a_dst-jpg_e35_s640x640_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=YB9JrucsF_gQ7kNvwGCpZcS&_nc_oc=AdoTQWYF47B9mQQkN1ekVWhPnrIAIGKpehtlw8Kr_NRStIZakHSOhpUa-XbjlhBOLshOrcjaPrv9MQd8bLPnp-1W&_nc_zt=23&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_gid=U_rYelbJrHW83wJdkjSgqA&_nc_ss=7260f&oh=00_Af6FzyvlO1psl2mGfti27oJRAK1xU78d4KB_kGTff5jHVw&oe=6A118D69",
+    "image": "./assets/sunrisehunter-carousel.jpg",
     "source": "Instagram",
     "addedAt": "2026-05-18T23:40:00.000Z",
     "fit": "contain",
